@@ -1,0 +1,58 @@
+show databases;
+
+create database MEAN_Project;
+
+use MEAN_Project;
+
+create table user_tbl (
+
+	your_name varchar(50),
+    username varchar(30),
+    email varchar(30),
+    password varchar(30),
+    confirm_password varchar(30)
+);
+
+create table admin_tbl (
+
+	admin_name varchar(50),
+    username varchar(30),
+    email varchar(30),
+    password varchar(30),
+    confirm_password varchar(30)
+);
+
+desc admin_tbl;
+
+desc user_tbl;
+
+alter table user_tbl
+	add address varchar(300);
+    
+alter table user_tbl
+	add mobile varchar(30);
+
+delete from user_tbl
+	where username != 'akashpol02';
+
+select email, password from user_tbl
+	where email = 'akashpol@gmail.com' AND password = 'akashpol';
+    
+select * from user_tbl;
+
+create table cntact_tbl (
+
+	your_name varchar(50),
+    email varchar(30),
+    mobile varchar(30),
+    subject varchar(100),
+    comment varchar(2000)
+);
+
+select * from cntact_tbl;
+
+delete from user_tbl;
+
+delete from cntact_tbl;
+
+select * from user_tbl;
