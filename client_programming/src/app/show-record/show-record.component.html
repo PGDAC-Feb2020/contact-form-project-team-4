@@ -1,0 +1,187 @@
+<div class="container-fluid">
+
+  <div [formGroup]="fbInput">
+    
+    <div class="row">
+
+      <div class="col
+      border
+      border-dark
+      d-flex
+      flex-row
+      mt-4"
+      style="height: 80px;">
+  
+        <div class="col-4
+        d-flex
+        flex-row
+        align-items-center"
+        style="font-size: 18px;">
+  
+          Email address : 
+          <input class="form-control
+          form-control-sm
+          ml-2"
+          type="email"
+          style="width: 200px;"
+          placeholder="abc@gmail.com"
+          formControlName="email">
+  
+        </div>
+  
+        <div class="col-4
+        d-flex
+        flex-row
+        align-items-center"
+        style="font-size: 18px;">
+  
+          Password : 
+          <input class="form-control
+          form-control-sm
+          ml-2"
+          type="password"
+          style="width: 200px;"
+          placeholder="password"
+          formControlName="password"
+          />
+  
+        </div>
+  
+        <div class="col-4
+        d-flex
+        flex-row
+        align-items-center
+        justify-content-center">
+  
+          <input class="btn
+          ml-2
+          text-light
+          bg-dark
+          btn-sm
+          btn-outline-light"
+          type="button"
+          style="width: 200px;"
+          (click)="showRecordFun()"
+          [disabled]="!fbInput.valid"
+          value="Show">
+  
+        </div>
+  
+      </div>
+    
+    </div>
+    
+  </div>
+
+  <div class="row
+  border
+  border-dark
+  mt-3
+  d-flex
+  justify-content-center
+  align-items-center"
+  style="font-size: 20px;
+  color: red;"
+  *ngIf="alertMessage">
+
+    No such a data available for requested user in database, please check your inputs. 
+
+  </div>
+
+  <div class="row
+  border
+  border-dark
+  mt-4">
+
+    <div class="col
+    d-flex
+    flex-row
+    justify-content-center
+    align-items-center"
+    style="height: 40vh;
+    font-size: 20px;">
+
+      <div class="col-6
+      d-flex
+      flex-column
+      justify-content-center
+      align-items-center">
+
+        <div style="margin-bottom: 10px;">
+
+          Your Name :
+  
+        </div>
+
+        <div style="margin-bottom: 10px;">
+
+          Username :
+  
+        </div>
+
+        <div style="margin-bottom: 10px;">
+
+          Email Address :
+  
+        </div>
+
+        <div style="margin-bottom: 10px;">
+
+          Password :
+  
+        </div>
+
+        <div style="margin-bottom: 10px;">
+
+          Confirm Password :
+  
+        </div>
+
+      </div>
+
+      <div class="col-6
+      d-flex
+      flex-column
+      justify-content-center
+      align-items-center"
+      id="recvDataBlock">
+
+        <div style="margin-bottom: 10px;">
+
+          firstName lastName 
+  
+        </div>
+
+        <div style="margin-bottom: 10px;">
+
+          username01 
+  
+        </div>
+
+        <div style="margin-bottom: 10px;">
+
+          abc@gmail.com 
+  
+        </div>
+
+        <div style="margin-bottom: 10px;">
+
+          password01 
+  
+        </div>
+
+        <div style="margin-bottom: 10px;">
+
+          confirm_password 
+  
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+

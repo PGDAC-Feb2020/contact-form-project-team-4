@@ -1,0 +1,183 @@
+<div class="container-fluid
+d-flex
+justify-content-center">
+
+  <div [formGroup]="fbInput">
+    
+    <div class="row
+    d-flex
+    flex-column
+    mt-4
+    justify-content-center"
+    style="width: 35vw;">
+
+      <div class="col
+      border
+      border-dark
+      text-danger
+      d-flex
+      justify-content-center
+      align-items-center"
+      style="height: 7vh;
+      font-size: 17px;"
+      id="alertId">
+        If you want to update your details, you have to provide your address and mobile number also.
+
+      </div>
+
+      <div class="col
+      border
+      border-dark
+      d-flex
+      flex-column
+      mt-4"
+      style="height: 60vh;
+      margin-top: 11vh;">
+  
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center
+        mt-3"
+        style="font-size: 18px;">
+  
+          Email address : 
+          <div class="d-flex
+          flex-column">
+
+            <input class="form-control
+            form-control-sm
+            ml-2"
+            type="email"
+            style="width: 200px;"
+            placeholder="abc@gmail.com"
+            formControlName="email">
+
+            <small>please provide correct email for authentication only.</small>
+
+          </div>
+
+        </div>
+  
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center"
+        style="font-size: 18px;">
+  
+          Password : 
+          <div class="d-flex
+          flex-column">
+
+            <input class="form-control
+            form-control-sm
+            ml-2"
+            type="password"
+            style="width: 200px;"
+            placeholder="password"
+            formControlName="password"
+            />
+  
+            <small>please provide correct password for authentication only.</small>
+
+          </div>
+  
+        </div>
+
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center"
+        style="font-size: 18px;">
+  
+          Your Name : 
+          <input class="form-control
+          form-control-sm
+          ml-2"
+          type="text"
+          style="width: 200px;"
+          placeholder="your new name"
+          formControlName="your_name">
+  
+        </div>
+
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center"
+        style="font-size: 18px;">
+  
+          Username : 
+          <input class="form-control
+          form-control-sm
+          ml-2"
+          type="text"
+          style="width: 200px;"
+          placeholder="your new username"
+          formControlName="username">
+  
+        </div>
+
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center"
+        style="font-size: 18px;">
+  
+          Address : 
+          <input class="form-control
+          form-control-sm
+          ml-2"
+          type="text"
+          style="width: 200px;"
+          placeholder="your home address"
+          formControlName="address">
+  
+        </div>
+
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center"
+        style="font-size: 18px;">
+  
+          Mobile Number : 
+          <input class="form-control
+          form-control-sm
+          ml-2"
+          type="text"
+          style="width: 200px;"
+          placeholder="xxxxxxxxxx"
+          formControlName="mobile">
+  
+        </div>
+  
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center
+        justify-content-center">
+  
+          <input class="btn
+          ml-2
+          text-light
+          bg-dark
+          btn-sm
+          btn-outline-light"
+          type="button"
+          style="width: 200px;"
+          (click)="updateRecordFun()"
+          [disabled]="!fbInput.valid"
+          value="Update">
+  
+        </div>
+  
+      </div>
+    
+    </div>
+    
+  </div>
+
+</div>
+
+

@@ -1,0 +1,186 @@
+<div class="container-fluid ">
+
+  <div class="row" style="height: 100vh">
+    
+    <div class="col-6
+      bg-info
+      d-flex
+      flex-column 
+      justify-content-center 
+      align-items-center
+      text-light"
+      style="margin-bottom: 20px;">
+
+          <div style="font-size: 50px;margin-bottom: 40px;">
+            Welcome to ContactForm
+          
+          </div>
+          
+          <div class="h3"
+          style="margin-left: 25px;">
+            “A successful website does three things:
+            It attracts the right kinds of visitors.
+            Guides them to the main services or product you offer.
+            Collect Contact details for future ongoing relation.” 
+          </div>
+    
+    </div>
+
+    <div class="col-6
+    bg-light
+    text-center
+    border border-light
+    p-2" 
+    [formGroup]="fbInput">
+  
+
+      <div class="row 
+      d-flex 
+      flex-column 
+      justify-content-center 
+      align-items-center
+      mt-5">
+
+        <div class="alert"
+        role="alert
+        alert-danger"
+        id="alertId"
+        *ngIf="alertMessage"
+        style="color: red;
+        font-size: 20px;">
+
+          Both the passwords should be same.
+        
+        </div>
+        
+        <p class="h3 
+        font-weight-bold 
+        mb-4 
+        text-info ">
+        REGISTER FORM 
+        </p>
+              
+        
+        <div class="mb-2"
+        style="width: 16vw;">
+        
+          <small style="font-size: 17px;">
+            Your name
+          </small> 
+
+          <input type="text" formControlName="your_name" 
+          class="form-control" placeholder="enter your first and last name">
+
+        </div>
+  
+        <div style="width: 16vw;">
+        
+          <small style="font-size: 17px;">
+            Username
+          </small> 
+        
+          <input type="text"  placeholder="enter your username" 
+          class="form-control" formControlName="username">
+
+          <div class="validations"*ngIf="fbInput.controls['username'].hasError('required') && fbInput.controls['username'].touched">
+            username is required*
+          </div>
+          <div class="validations"
+          *ngIf="fbInput.controls['username'].hasError('pattern')">
+          Invalid username.
+          </div>
+        
+        </div>
+  
+        <div class="mt-4 mb-2 " 
+        style="width: 16vw">
+
+          <small style="font-size: 17px;">
+            Email address
+          </small> 
+
+          <input type="email" placeholder="abc@gmail.com"
+          class="form-control" formControlName="email">
+
+          <div class="validations"*ngIf="fbInput.controls['email'].hasError('required') && fbInput.controls['email'].touched">
+            Email address is required*
+          </div>
+          <div class="validations"
+          *ngIf="fbInput.controls['email'].hasError('pattern')">
+            Invalid email address.
+          </div>
+
+          <small id="emailHelp" 
+            class="form-text 
+            text-muted 
+            mb-2">
+          
+            please provide your email address
+          
+          </small>
+        </div>
+  
+        
+        <div class="mt-2"
+        style="width: 16vw;">
+        
+        <small style="font-size: 17px;">
+          Password
+        </small> 
+        
+        <input type="password" placeholder="password"
+          class="form-control"
+          formControlName="password">
+
+          <div class="validations"*ngIf="fbInput.controls['password'].hasError('required') && fbInput.controls['password'].touched">
+            Password is required*
+          </div>
+          <div class="validations"
+          *ngIf="fbInput.controls['password'].hasError('pattern')">
+            Invalid password.
+          </div>
+
+        </div>
+  
+        <div class="mt-2"
+        style="width: 16vw;">
+
+          <small style="font-size: 17px;">
+            Confirm password
+          </small>   
+          
+
+          <input type="password" placeholder="confirm password"
+            class="form-control"
+            formControlName="confirm_password">
+
+            <div class="validations"*ngIf="fbInput.controls['confirm_password'].hasError('required') && fbInput.controls['confirm_password'].touched">
+              Confirm_password is required*
+            </div>
+            <div class="validations"
+            *ngIf="fbInput.controls['password'].hasError('pattern')">
+              Invalid confirm_password.
+            </div>
+
+        </div>
+  
+  
+        <button style="width: 8vw;" 
+        class="btn btn-md btn-secondary
+        mt-3"
+        [disabled]="!fbInput.valid"
+        (click)="registerFun()">
+        Register
+        </button>
+
+        <p class="mt-1">By clicking <b>Register</b> button you agree to our terms of service</p>
+  
+        <a class="text-primary"routerLink="/log-in">Go to LogIn page</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

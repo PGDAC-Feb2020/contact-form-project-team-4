@@ -1,0 +1,117 @@
+<div class="container-fluid
+d-flex
+justify-content-center">
+
+  <div [formGroup]="fbInput">
+    
+    <div class="row
+    d-flex
+    flex-column
+    justify-content-center"
+    style="width: 35vw;
+    margin-top: 50px;">
+
+      <div class="col
+      border
+      border-dark
+      text-danger
+      d-flex
+      justify-content-center
+      align-items-center"
+      style="height: 30vh;
+      font-size: 20px;"
+      id="alertId">
+
+        Make sure of these instructions : 
+        <br>
+        1) If you are going to delete your record provide your email address and password below.
+        <br>
+        2) If you deleted your record from our site, your all data will be removed. you have to register again as a new user for log in. 
+
+      </div>
+
+      <div class="col
+      border
+      border-dark
+      d-flex
+      flex-column
+      mt-4"
+      style="height: 30vh;
+      margin-top: 11vh;">
+  
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center
+        mt-3"
+        style="font-size: 18px;">
+  
+          Email address : 
+          <div class="d-flex
+          flex-column">
+
+            <input class="form-control
+            form-control-sm
+            ml-2"
+            type="email"
+            style="width: 200px;"
+            placeholder="abc@gmail.com"
+            formControlName="email">
+
+          </div>
+
+        </div>
+  
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center"
+        style="font-size: 18px;">
+  
+          Password : 
+          <div class="d-flex
+          flex-column">
+
+            <input class="form-control
+            form-control-sm
+            ml-2"
+            type="password"
+            style="width: 200px;"
+            placeholder="password"
+            formControlName="password"
+            />
+  
+          </div>
+  
+        </div>
+  
+        <div class="col
+        d-flex
+        flex-row
+        align-items-center
+        justify-content-center">
+  
+          <input class="btn
+          ml-2
+          text-light
+          bg-dark
+          btn-sm
+          btn-outline-light"
+          type="button"
+          style="width: 200px;"
+          (click)="deleteRecordFun()"
+          [disabled]="!fbInput.valid"
+          value="Delete">
+  
+        </div>
+  
+      </div>
+    
+    </div>
+    
+  </div>
+
+</div>
+
+
+
